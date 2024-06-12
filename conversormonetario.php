@@ -8,10 +8,15 @@
     <link rel="stylesheet" href="./styles.css" class="css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Domine:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <div class="listra1"></div>
+    <div class="listra2"></div>
+    <header>
+        <h1><a href="./index.php">Projetos PHP</a></h1>
+    </header>
     <div>
         <h1>Conversor Monetário</h1>
         <form action="conversormonetario.php" method="POST">
@@ -75,7 +80,9 @@
             <input class="btn" type="reset" value="Limpar" />
         </form>
     </div>
-
+    <footer>
+        <p>Desenvolvido por Kauã Valim - 2024</p>
+    </footer>
 </body>
 
 </html>
