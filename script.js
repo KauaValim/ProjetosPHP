@@ -1,15 +1,10 @@
 const valor = document.getElementById('valor')
-const seletor = document.getElementById('forma')
-console.log(valor)
-console.log(seletor)
+const seletor = document.getElementsByTagName('option')
 
 function getSeletor() {
-    if (document.getElementById('forma').value == 'Retângulo') { return( valor.innerHTML('<p>Largura: <input type="number" name="largura" required></p><p>Altura: <input type="number" name="altura" required></p>')) }
+    if (seletor.item(0).selected == true) { valor.innerHTML = '<p>Largura: <input placeholder="0,00" type="number" name="largura" step="0.1" required></p><p>Altura: <input placeholder="0,00" type="number" name="altura" step="0.1" required></p>' }
 
-    if (document.getElementById('forma').value == 'Triângulo') { valor.innerHTML('<p>Base: <input type="number" name="base" required></p><p>Altura Triangulo: <input type="number" name="atriangulo" required></p>') }
+    if (seletor.item(1).selected == true) { valor.innerHTML = '<p>Base: <input placeholder="0,00" type="number" name="base" step="0.1" required></p><p>Altura: <input placeholder="0,00" type="number" name="atriangulo" step="0.1" required></p>' }
 
-    if (document.getElementById('forma').value == 'Círculo') { valor.innerHTML('<p>Raio: <input type="number" name="raio" required></p>') }
+    if (seletor.item(2).selected == true) { valor.innerHTML = '<p>Raio: <input placeholder="0,00" type="number" name="raio" step="0.1" required></p>' }
 }
-
-
-
