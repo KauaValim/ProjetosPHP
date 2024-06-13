@@ -17,10 +17,11 @@
     <header>
         <h1><a href="./index.php">Projetos PHP</a></h1>
     </header>
+    <main>
     <div class="container">
         <h1>Conversor de Temperatura</h1>
         <br>
-        <form action="tempconverter.php" method="POST">
+        <form class="formulario" action="tempconverter.php" method="POST">
             <p>Temperatura
                 <input type="number" step="0.01" name="temp" required>
             </p>
@@ -88,6 +89,7 @@
         }
     }
     ?>
+    </main>
     <footer>
         <p>Desenvolvido por Kauã Valim - 2024</p>
     </footer>

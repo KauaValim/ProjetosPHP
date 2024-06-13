@@ -17,8 +17,9 @@
     <header>
         <h1><a href="./index.php">Projetos PHP</a></h1>
     </header>
+    <main>
     <h1>Calculadora de Área</h1>
-    <form action="calculadoraarea.php" method="post">
+    <form class="formulario" action="calculadoraarea.php" method="post">
         <p>Escolha a forma:
             <select name="forma" class="forma" onchange="getSeletor()">
                 <option value="Retangulo">Retângulo</option>
@@ -33,6 +34,7 @@
         <input type="submit" value="Calcular">
         <input type="reset" value="Limpar">
     </form>
+    <div class="resposta">
     <?php
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
@@ -48,7 +50,7 @@
 
         if (isset($_POST["base"]) && isset($_POST["atriangulo"])) {
             if (is_numeric($_POST["base"]) && is_numeric($_POST["atriangulo"])) {
-                $resposta = $_POST["atriangulo"] * $_POST["base"];
+                $resposta = $_POST["atriangulo"] * $_POST["base"] / 2.0;
                 echo "<h2>$resposta M²</h2>";
             } else {
                 echo "<h2>Informe números nos campos de Base e Altura</h2>";
@@ -66,6 +68,8 @@
         }
     }
     ?>
+    </div>
+    </main>
     <footer>
         <p>Desenvolvido por Kauã Valim - 2024</p>
     </footer>

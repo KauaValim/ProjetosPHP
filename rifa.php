@@ -29,7 +29,7 @@
     echo "<h2 class='subtitle'>Quantidade de rifas à gerar: </h2>";
     echo "<div class='head'>";
 
-    echo "<form class='formulario' action='rifa.php' method='POST'>";
+    echo "<form class='formulariorifa' action='rifa.php' method='POST'>";
     echo "<input type='number' placeholder='Digite a quantidade' min='0' max='9999' maxlength=4 name='valor' required/>";
     echo "<input type='number' placeholder='Nº inicial' min='1' max='9999' maxlength=4 name='inicio' required/>";
     echo "<button type='submit'>Gerar Rifas</button>";
