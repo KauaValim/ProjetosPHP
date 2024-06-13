@@ -74,8 +74,6 @@
 
     ?>
     <br>
-    <br>
-    <br>
     </main>
     <footer>
         <p>Desenvolvido por Kauã Valim - 2024</p>
