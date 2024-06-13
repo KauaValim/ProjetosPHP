@@ -17,26 +17,22 @@
     <header>
         <h1><a href="./index.php">Projetos PHP</a></h1>
     </header>
-    <h1>Calculadora IMC</h1>
-    <form action="calculadoraimc.php" method="POST">
-        <label for="nome">Nome: </label>
-        <input type="text" id="nome" name="nome" required>
+    <main class="maingeral">
+    <h1 >Calculadora IMC</h1>
+    <form class="formulariogeral" action="calculadoraimc.php" method="POST">
+        <input class="inputbox" placeholder="Digite seu nome" type="text" id="nome" name="nome" required>
         <br>
         <br>
-        <label for="peso">Peso (Kg): </label>
-        <input type="number" id="peso" name="peso" step="0.1" required>
+        <input class="inputbox" placeholder="Digite seu peso (Kg)" type="number" id="peso" name="peso" step="0.1" required>
         <br>
         <br>
-        <label for="altura">Altura (m): </label>
-        <input type="number" id="altura" name="altura" step="0.01" required>
+        <input class="inputbox" placeholder="Digite sua altura (m)" type="number" id="altura" name="altura" step="0.01" required>
         <br>
         <br>
-        <label for="anoNascimento">Ano Nascimento: </label>
-        <?php echo "<input type='number' min='1900' max='" . date("Y") . "' id='anoNascimento' name='anoNascimento' required>" ?>
+        <?php echo "<input class='inputbox' placeholder='Digite seu ano de nascimento' type='number' min='1900' max='" . date("Y") . "' id='anoNascimento' name='anoNascimento' required>" ?>
         <br>
-        <br>
-        <input type="submit" value="Calcula IMC">
-        <input type="reset" value="Limpar">
+        <input class="button" type="submit" value="Calcular IMC">
+        <input class="button" type="reset" value="Limpar">
     </form>
     <div class="resposta">
         <?php
@@ -46,7 +42,7 @@
                 $peso = $_POST["peso"];
                 $altura = $_POST["altura"];
                 $anoNascimento = $_POST["anoNascimento"];
-                $erro = empty($nome) || empty($peso) || empty($altura) || empty($anoNascimento) ? "Todos os campos são obrigatórios" : ((!is_numeric($altura) || !is_numeric($anoNascimento) || ($anoNascimento < 1970 && $anoNascimento > date("Y")) || $peso <= 0 || $altura <= 0) ? "Por favor, insira valores válidos para nome, peso, altura e ano de nascimento" : "");
+                $erro = empty($nome) || empty($peso) || empty($altura) || empty($anoNascimento) ? "<div class='resposta'><h2>Todos os campos são obrigatórios</h2></div>" : ((!is_numeric($altura) || !is_numeric($anoNascimento) || ($anoNascimento < 1970 && $anoNascimento > date("Y")) || $peso <= 0 || $altura <= 0) ? "<div class='resposta'><h2>Por favor, insira valores válidos para nome, peso, altura e ano de nascimento</h2></div>" : "");
                 if ($erro) {
                     echo $erro;
                 } else {
@@ -54,16 +50,21 @@
                     $imc = number_format($imc, 2);
                     $classificacao = ($imc < 18.5) ? "Abaixo do peso" : (($imc < 24.9) ? "Peso normal" : (($imc < 29.9) ? "Sobre peso" : "Obesidade"));
                     $idade = date("Y") - $anoNascimento;
-                    echo "<br>$nome, ";
-                    echo "você tem: $idade anos, e seu IMC é: $imc<br><br>";
-                    echo "Classificação: $classificacao";
+                    echo "<div class='resposta'>";
+                    echo "<h2>$nome, ";
+                    echo "você tem: $idade anos, e seu IMC é: $imc</h2>";
+                    echo "<h2>Classificação: $classificacao</h2>";
+                    echo "</div>";
                 }
             } else {
-                echo "Formulário não enviado corretamente";
+                echo "<div class='resposta'>";
+                echo "<h2>Formulário não enviado corretamente</h2>";
+                echo "</div>";
             }
         }
         ?>
     </div>
+    </main>
     <footer>
         <p>Desenvolvido por Kauã Valim - 2024</p>
     </footer>

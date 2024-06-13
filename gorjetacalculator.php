@@ -17,10 +17,11 @@
     <header>
         <h1><a href="./index.php">Projetos PHP</a></h1>
     </header>
+    <main>
     <div class="container">
         <h1>Calculadora de Gorjeta</h1>
         <br>
-        <form action="gorjetacalculator.php" method="post">
+        <form class="formulario" action="gorjetacalculator.php" method="post">
             <p>Valor da Conta: (R$)
                 <input type="number" name="valor" required>
             </p>
@@ -48,6 +49,7 @@
         }
         ?>
     </div>
+    </main>
     <footer>
         <p>Desenvolvido por Kauã Valim - 2024</p>
     </footer>
