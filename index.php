@@ -17,7 +17,7 @@
     <header>
         <h1><a href="./index.php">Projetos PHP</a></h1>
     </header>
-    <main>
+    <main class="maingeral">
         <h1>Lista de Projetos</h1>
         <ul>
             <a href="./rifa.php">

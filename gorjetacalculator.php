@@ -17,38 +17,32 @@
     <header>
         <h1><a href="./index.php">Projetos PHP</a></h1>
     </header>
-    <main>
-    <div class="container">
-        <h1>Calculadora de Gorjeta</h1>
-        <br>
-        <form class="formulario" action="gorjetacalculator.php" method="post">
-            <p>Valor da Conta: (R$)
-                <input type="number" name="valor" required>
-            </p>
-            <br>
-            <p>Porcentagem de gorjeta: (%)
-                <input type="number" name="percent" required>
-            </p>
-            <br>
-            <div class="buttons">
-                <input class="btn" type="submit" value="Calcular">
-                <input class="btn" type="reset" value="Limpar">
-            </div>
-        </form>
-    </div>
+    <main class="maingeral">
+        <div class="content">
+            <h1>Calculadora de Gorjeta</h1>
 
-    <div class="resposta">
-        <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if (empty("valor") || empty("percent")) {
-                echo "Preencha todos os campos";
-            } else {
-                $resposta = $_POST["valor"] * ($_POST["percent"] / 100);
-                echo "<h2 class='result'>Valor da gorjeta: R$ <b>" . number_format($resposta, 2, ',', '.') . "<b><h2>";
+            <form class="formulariogeral" action="gorjetacalculator.php" method="post">
+                <input class="inputbox" placeholder="Valor da Conta: (R$)" step="0.01" type="number" name="valor" required>
+                <br>
+                <input class="inputbox" placeholder="Porcentagem de gorjeta: (%)" type="number" name="percent" required>
+                <br>
+                    <input class="button" type="submit" value="Calcular">
+                    <input class="button" type="reset" value="Limpar">
+            </form>
+        </div>
+
+        <div class="resposta">
+            <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                if (empty("valor") || empty("percent")) {
+                    echo "Preencha todos os campos";
+                } else {
+                    $resposta = $_POST["valor"] * ($_POST["percent"] / 100);
+                    echo "<h2 class='result'>Valor da gorjeta: R$ <b>" . number_format($resposta, 2, ',', '.') . "<b><h2>";
+                }
             }
-        }
-        ?>
-    </div>
+            ?>
+        </div>
     </main>
     <footer>
         <p>Desenvolvido por Kauã Valim - 2024</p>

@@ -41,12 +41,30 @@
                         <option name="JPY" value="JPY">JPY</option>
                     </select>
                 </div>
-                <div class="resultado">
+                <br>
+                <input class="button" type="submit" value="Converter" />
+                <input class="button" type="reset" value="Limpar" />
+            </form>
+            <div class="resultado">
                     <?php
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         if ($_POST["selector1"] == $_POST["selector2"]) {
-                            $resultado = $_POST["input1"];
-                            echo "<input for='selector2' name='input2' value=$resultado readonly />";
+                            if($_POST["selector1"] == "USD") {
+                                $resultado = $_POST["input1"];
+                                echo "<div class='resposta'><h2>$ $resultado </h2></div>";
+                            }
+                            if($_POST["selector1"] == "BRL") {
+                                $resultado = $_POST["input1"];
+                                echo "<div class='resposta'><h2>R$ $resultado </h2></div>";
+                            }
+                            if($_POST["selector1"] == "EUR") {
+                                $resultado = $_POST["input1"];
+                                echo "<div class='resposta'><h2>€ $resultado </h2></div>";
+                            }
+                            if($_POST["selector1"] == "JPY") {
+                                $resultado = $_POST["input1"];
+                                echo "<div class='resposta'><h2>¥ $resultado </h2></div>";
+                            }
                         }
                         ;
 
@@ -63,25 +81,29 @@
                                 $data = json_decode($response);
                                 $cotacao = $data->$local->bid;
                             } else {
-                                echo "Erro ao fazer a requisição à API: " . curl_error($ch);
+                                echo "<div class='resposta'><h2>Erro ao fazer a requisição à API: " . curl_error($ch)."</h2></div>";
                             }
                             curl_close($ch);
                             $resultado = $_POST["input1"] * $cotacao;
-                            echo "<input for='selector2' name='input2' value='" . number_format($resultado, 2, ',', '.') . "' readonly />";
+                            
+                            if($_POST["selector2"] == "USD") {
+                                echo "<div class='resposta'><h2>$ ".number_format($resultado, 2, ',', '.')." </h2></div>";
+                            }
+                            if($_POST["selector2"] == "BRL") {
+                                echo "<div class='resposta'><h2>R$ ".number_format($resultado, 2, ',', '.')." </h2></div>";
+                            }
+                            if($_POST["selector2"] == "EUR") {
+                                echo "<div class='resposta'><h2>€ ".number_format($resultado, 2, ',', '.')." </h2></div>";
+                            }
+                            if($_POST["selector2"] == "JPY") {
+                                echo "<div class='resposta'><h2>¥ ".number_format($resultado, 2, ',', '.')." </h2></div>";
+                            }
                         }
                         ;
-                    } else {
-                        echo "<input for='selector2' placeholder='Valor' name='input2' type='number' readonly />";
                     }
                     ;
                     ?>
                 </div>
-
-                <br>
-                <br>
-                <input class="btn" type="submit" value="Converter" />
-                <input class="btn" type="reset" value="Limpar" />
-            </form>
         </div>
     </main>
     <footer>

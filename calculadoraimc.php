@@ -20,16 +20,16 @@
     <main class="maingeral">
     <h1 >Calculadora IMC</h1>
     <form class="formulariogeral" action="calculadoraimc.php" method="POST">
-        <input class="inputbox" placeholder="Digite seu nome" type="text" id="nome" name="nome" required>
+        <input class="inputbox" placeholder="Nome" type="text" id="nome" name="nome" required>
         <br>
         <br>
-        <input class="inputbox" placeholder="Digite seu peso (Kg)" type="number" id="peso" name="peso" step="0.1" required>
+        <input class="inputbox" placeholder="Peso (Kg)" type="number" id="peso" name="peso" step="0.1" required>
         <br>
         <br>
-        <input class="inputbox" placeholder="Digite sua altura (m)" type="number" id="altura" name="altura" step="0.01" required>
+        <input class="inputbox" placeholder="Altura (m)" type="number" id="altura" name="altura" step="0.01" required>
         <br>
         <br>
-        <?php echo "<input class='inputbox' placeholder='Digite seu ano de nascimento' type='number' min='1900' max='" . date("Y") . "' id='anoNascimento' name='anoNascimento' required>" ?>
+        <?php echo "<input class='inputbox' placeholder='Ano de nascimento' type='number' min='1900' max='" . date("Y") . "' id='anoNascimento' name='anoNascimento' required>" ?>
         <br>
         <input class="button" type="submit" value="Calcular IMC">
         <input class="button" type="reset" value="Limpar">
