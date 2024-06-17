@@ -115,7 +115,15 @@ footer p {
 
 .formulariorifa {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-evenly;
+    padding-bottom: 20px;
+}
+
+.formulariorifa2 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
     padding-bottom: 20px;
 }
 
