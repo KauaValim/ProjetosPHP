@@ -1,52 +1,51 @@
 # Projetos PHP
 
-![GitHub repo size](https://img.shields.io/github/repo-size/kauavalim/ProjetosPHP?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/kauavalim/ProjetosPHP?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/kauavalim/ProjetosPHP?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/kauavalim/ProjetosPHP?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/kauavalim/ProjetosPHP?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/KauaValim/ProjetosPHP?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/KauaValim/ProjetosPHP?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/KauaValim/ProjetosPHP?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/KauaValim/ProjetosPHP?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/KauaValim/ProjetosPHP?style=for-the-badge)
 
 
 > This is a project for a website based on PHP, which provides some tools for use
 
 <figure>
+    <h3>Homepage</h3>
     <img name="homepage" src="./static/Captura de tela homepage.png" alt="Screenshot Homepage height=50px width=50px">
-    <figcaption style="text-align: center">Homepage</figcaption>
 </figure>
 
 <details>
     <summary>Expand for more screenshots</summary>
 
 <figure>
+    <h3>Raffle Generator</h3>
     <img src="./static/Captura de tela rifa.png" alt="Screenshot Raffle Generator">
-    <figcaption style="text-align: center">Raffle Generator</figcaption>
 </figure>
 
 <figure>
+    <h3>IMC Calculator</h3>
     <img src="./static/Captura de tela calculadoraIMC.png" alt="Screenshot IMC Calculator">
-    <figcaption style="text-align: center">IMC Calculator</figcaption>
 </figure>
 
 <figure>
+    <h3>Currency Converter</h3>
     <img src="./static/Captura de tela conversorMonetario.png" alt="Screenshot Currency Converter">
-    <figcaption style="text-align: center">Currency Converter</figcaption>
 </figure>
 
 <figure>
+    <h3>Tip Calculator</h3>
     <img src="./static/Captura de tela calculadoraGorjetas.png" alt="Screenshot Tip Calculator">
-    <figcaption style="text-align: center">Tip Calculator</figcaption>
 </figure>
 
 <figure>
+    <h3>Temperature Converter</h3>
     <img src="./static/Captura de tela conversorTemperatura.png" alt="Screenshot Temperature 
     Converter">
-    <figcaption style="text-align: center">Temperature 
-    Converter</figcaption>
 </figure>
 
 <figure>
+    <h3>Area Calculator</h3>
     <img src="./static/Captura de tela calculadoraDeArea.png" alt="Screenshot Area Calculator">
-    <figcaption style="text-align: center">Area Calculator</figcaption>
 </figure>
 
 </details>
